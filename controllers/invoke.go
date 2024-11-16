@@ -123,5 +123,7 @@ func (c *InvokeController) Post() {
 			Err:     "",
 		},
 	}
+	a, err := json.Marshal(c.Data["json"])
+	fmt.Println("leijiaomin", string(a), err)
 	c.ServeJSON()
 }
